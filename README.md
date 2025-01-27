@@ -16,4 +16,4 @@ This project creates a fun, animated scene using HTML and CSS, featuring Mario d
    ```bash
    git clone https://github.com/your-username/repository-name.git
 ## Screenshot
-![Project Output](./path-to-your-screenshot/screenshot.png)
+![Project Output](./mario-output.png)
