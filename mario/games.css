@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body{
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+ margin: 0;
+}
+.sky,.grass,.road{
+    position: relative;
+}
+.sky{
+    height:40%;
+    background: skyblue;
+}
+.grass{
+    height: 30%;
+    background: rgb(29, 209, 29);
+}
+.road{
+    height: 30%;
+    background: grey;
+    border-bottom: 10px solid rgb(133, 115, 115);
+    border-top: 10px solid rgb(133, 115, 115);
+    width: 100%;
+    text-decoration: dotted rgb(167, 156, 156);
+}
+.lines{
+    top:45%;
+    border:5px dashed white ;
+    width: 100%;
+    position: absolute;
+}
+.mario{
+    transform: scaleY(1.5);
+    /* margin-bottom: 20px; */
+    left: 0;
+    top: -40px;
+    /* animation-name: drive;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+     animation-timing-function: cubic-bezier(0,.69,1,.36); 
+    animation-timing-function: linear; */
+
+    /* animation-direction: alternate-reverse; */
+    /* mario jump */
+    animation: jump 0.3s 1.3s ease,drive 4s both infinite linear;
+}
+@keyframes drive{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(1600px);
+    }
+}
+.cloud{
+    position: absolute;
+}
+.cloud:nth-child(1){
+    top: 120px;
+    width: 200px;
+    animation: wind 40s linear infinite reverse;
+
+}
+.cloud:nth-child(2){
+    width: 150px;
+    opacity: 0.5;
+    top: 0;
+    animation: wind 70s linear infinite reverse;
+
+}
+.img1{
+    top: 70px;
+}
+.img2{
+    top: 30px;
+}
+.bird1{
+    top: 120px;
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    animation: flew 10s 6s linear infinite;
+    
+}
+.bird2{
+    top:40px;
+    width: 40px;
+    position: absolute;
+    height: 50px;
+    animation: flew 5s 3s linear infinite;
+    animation-direction: normal;
+
+    
+}
+@keyframes flew {
+        from{transform: translateX(-5       00px);}
+        to{transform: translateX(1200px);}
+    
+}
+@keyframes wind{
+    from{
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(1600px);
+    }
+}
+@keyframes jump{
+    0%{
+        top: -40px;
+    }
+    50%{
+        top:-100px;
+    }
+    100%{
+        top: 40px;
+    }
+}
